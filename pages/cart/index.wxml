@@ -8,7 +8,7 @@
 
   <view class="flex tips">
     <text>共 1 种商品</text>
-    <text class="text-red">编辑商品</text>
+    <text class="text-red" bindtap="toggleEdit">{{isEdit?'完成':'编辑商品'}}</text>
   </view>
 
   <view class="goods-card bg-white radius">
