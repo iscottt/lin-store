@@ -1,0 +1,32 @@
+<ui-sys footer="{{false}}">
+  <ui-navbar back="{{false}}" bg=""></ui-navbar>
+
+  <!-- 背景图 start -->
+  <view class="bg-contaniner tn-bg-blue"></view>
+  <!-- 背景图 end -->
+
+  <!-- 欢迎语 start -->
+  <view class="welcome">
+    <view class="text-40 ml-4 mt-4 text-white">欢迎回来</view>
+    <view class="text-white ml-4 my-4 text-14" style="opacity: 0.7;">大丸子的代购小屋</view>
+  </view>
+  <!-- 欢迎语 end -->
+
+  <!-- 登录部分 start -->
+  <form class="login-form">
+    <view class="form-item mt-4">
+      <view class="label mb-2">用户名</view>
+      <view class="content">
+        <input type="text" placeholder="请输入用户名" />
+      </view>
+    </view>
+    <view class="form-item mt-4">
+      <view class="label mb-2">密码</view>
+      <view class="content">
+        <input type="password" placeholder="请输入密码" />
+      </view>
+    </view>
+    <view class="ui-btn block bg-blue lg round mt-6 login-btn" >登录</view>
+  </form>
+  <!-- 登录部分 end -->
+</ui-sys>

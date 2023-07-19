@@ -1,0 +1,7 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "ui-stepper": "/mp-cu/colorUI/components/ui-stepper/ui-stepper",
+    "ui-checkbox" : "/mp-cu/colorUI/components/ui-checkbox/ui-checkbox"
+  }
+}

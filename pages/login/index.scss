@@ -1,0 +1,97 @@
+ /* 移动背景部分 start*/
+ .bg-contaniner {
+  position: fixed;
+  top: -0rpx;
+  left: -300rpx;
+  --text-color: hsl(0 95% 60%);
+  --bg-color: hsl(0 0% 100%);
+  --bg-size: 200px;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  place-content: center;
+  overflow: hidden;
+  background-color: #5481EE;
+  z-index: -1;
+  &::before {
+    --size: 150vmax;
+    content: "";
+    inline-size: var(--size);
+    block-size: var(--size);
+    background-image: url("https://tnuiimage.tnkjapp.com/animate/animate3.png");
+    background-size: var(--bg-size);
+    background-repeat: repeat;
+    transform: rotate(45deg);
+    opacity: 0.35;
+    animation: bg 6s linear infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-contaniner::before {
+    animation-duration: 0s;
+  }
+}
+
+@keyframes bg {
+  to {
+    background-position: 0 calc(var(--bg-size) * -1);
+  }
+}
+/* 移动背景部分 end*/
+
+/* 欢迎语 start */
+.welcome{
+  font-family: TITLE;
+}
+/* 欢迎语 end */
+
+/* 登录部分 start */
+.login-form{
+  overflow: hidden;
+  background: #fff;
+  width: 100vw;
+  height: 65vh;
+  position: fixed;
+  bottom: 0;
+  padding: 60rpx;
+  box-sizing: border-box;
+  &:after{
+    content:"";
+    width: 0;
+    height: 0;
+    left: 0;
+    border-bottom: 100rpx solid #fff;
+    border-left: 100vw solid transparent;
+    position: fixed;
+    bottom: 65vh;
+  }
+  .form-item{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    .content{
+      width: 100%;
+      height: 80rpx;
+      line-height: 80rpx;
+      display: flex;
+      align-items: flex-end;
+      input{
+        width: 100%;
+        height: 80rpx;
+        line-height: 80rpx;
+        border-bottom: 1rpx solid #ebebe8;
+        &:focus-within{
+          transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+          border-color: #5481EE;
+        }
+      }
+    }
+  }
+  .login-btn{
+    box-shadow: 1rpx 10rpx 24rpx 0rpx rgba(60, 129, 254, 0.35);
+    font-family: TITLE;
+  }
+}

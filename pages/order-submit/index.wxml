@@ -1,0 +1,76 @@
+<ui-sys bg="bg-gray-f">
+  <!-- 顶部导航栏 start -->
+  <ui-navbar bg="bg-white" ui="shadow-sm" back="{{false}}" isCenter="true">
+    <view slot="left" class="back-main ml-3" style="height: {{sys_capsule.height}}px;width: {{sys_capsule.height}}px;">
+      <text class="_icon-arrow text-bold text-black back-icon"></text>
+    </view>
+    <view slot="center" class="text-bold">确认下单</view>
+  </ui-navbar>
+  <!-- 顶部导航栏 end -->
+
+  <!-- 选择地址 start -->
+  <view class="address flex px-4">
+    <!-- 未选择地址 -->
+    <!-- <view class="no-addr flex ">
+      <text class="cicon-location-on-o text-22 text-pink mr-2"></text>
+      <view class="tips text-dark-5">请选择收货地址</view>
+    </view> -->
+    <!-- 已选择地址 -->
+    <view class="addr-info flex py-4 pl-2">
+      <view class="title text-dark-3 text-16 mb-2">方木 Scott ᐝ <text>13271820315</text></view>
+      <view class="desc text-dark-8 text-12">浙江省杭州市浙江省杭州市拱墅区欣盛东方福邸二期21-2-1201</view>
+    </view>
+    <view class="action flex">
+      <text class="_icon-forward text-20 text-pink"></text>
+    </view>
+  </view>
+  <!-- 选择地址 end -->
+
+  <!-- 订单商品 start -->
+  <view class="goods-main mt-3 bg-white px-4">
+    <!-- 大标题 start -->
+    <view class="title flex"> <text class="cicon-cart text-pink text-18 mr-3"></text> <text>共<text class="text-red text-16"> 3 </text>件商品</text></view>
+    <!-- 大标题 end -->
+
+    <!-- 商品卡片 start -->
+    <block wx:for="{{3}}" wx:key="index">
+      <view class="goods-card mb-3 flex">
+        <image src="/assets/imgs/goods.png"></image>
+        <view class="info flex pl-4">
+          <view class="name mb-1">🇺🇸Dior变色唇膏001</view>
+          <view class="actions flex">
+            <view class="price text-red text-18 text-bold">
+              <text class="text-14 mr-1">¥</text>
+              <text style="letter-spacing: -1px;">800</text>
+            </view>
+            <ui-steps />
+          </view>
+        </view>
+      </view>
+    </block>
+    <!-- 商品卡片 end -->
+
+    <view style="height: 20rpx;"></view>
+
+    <!-- 备注 start -->
+    <view class="text-pink border-top py-4">添加订单备注</view>
+
+    <!-- <view class="remark-main">
+      <view class="text-pink py-4 border-top">订单备注</view>
+      <textarea auto-focus class="bg-grey-thin px-4 py-4"></textarea>
+    </view> -->
+    <!-- 备注 end -->
+  </view>
+  <!-- 订单商品 end -->
+
+  <ui-fixed bg="bg-white" bottom>
+    <view class="tips text-red text-12 p-3 text-center">请谨慎核对订单信息，交易纠纷或责任自行与商家解决或承担</view>
+    <view class="p-4 flex action-bar">
+      <view>
+       <text class="text-16">3 </text> 件商品，合计：<text class="text-red text-bold"><text class="text-16 mr-1">¥</text> <text class="text-22" style="letter-spacing: -2px;">2400</text> </text>
+      </view>
+      <view class="ui-btn round bg-red ">提交订单</view>
+    </view>
+  </ui-fixed>
+
+</ui-sys>

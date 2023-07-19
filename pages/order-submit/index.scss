@@ -1,0 +1,117 @@
+/* pages/order-submit/index.wxss */
+
+/* 顶部导航拦 start */
+.back-main{
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .back-icon{
+    font-size: 18px;
+    transform: rotate(-180deg);
+  }
+}
+
+.ui-navbar-box::after {
+  border: none !important;
+}
+/* 顶部导航拦 end */
+
+/* 收货地址 start */
+.address {
+  background-color: #fff;
+  position: relative;
+  width: 100%;
+  min-height: 160rpx;
+  overflow: hidden;
+  align-items: center;
+  justify-content: flex-start;
+  &:before {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background: repeating-linear-gradient(-45deg, #ff6c6c, #ff6c6c 20%, transparent 0, transparent 25%, #1989fa 0, #1989fa 45%, transparent 0, transparent 50%);
+    background-size: 80px;
+    content: "";
+  }
+  .no-addr{
+    flex:1;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    .tips{
+      font-weight: 500;
+    }
+  }
+  .addr-info{
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-direction: column;
+    .title{
+      font-weight: 500;
+    }
+  }
+  .action{
+    width: 100rpx;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+/* 收货地址 end */
+
+/* 商品信息 start */
+.goods-main{
+  border-radius: 10rpx;
+  min-height: 300rpx;
+  .title{
+    height: 100rpx;
+    width: 100%;
+    align-items: center;
+  }
+  .goods-card{
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    image{
+      width: 180rpx;
+      height: 180rpx;
+      object-fit: cover;
+    }
+    .info{
+      height: 100%;
+      flex:1;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      .name{
+        width: 80%;
+        min-height: 80rpx;
+      }
+      .actions{
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+.remark-main{
+  width: 100%;
+  textarea{
+    border-radius: 10rpx;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+.action-bar{
+  align-items: center;
+  justify-content: space-between;
+}
+.tips{
+  background: #FDF6E1;
+}

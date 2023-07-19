@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "ui-steps": "/mp-cu/colorUI/components/ui-steps/ui-steps",
+    "ui-fixed": "/mp-cu/colorUI/components/ui-fixed/ui-fixed"
+  },
+  "navigationStyle": "custom"
+}

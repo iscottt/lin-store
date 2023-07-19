@@ -1,0 +1,143 @@
+<ui-sys ui="bg-gray-thin" footer="{{true}}">
+  <!-- 顶部导航栏 start -->
+  <ui-navbar back="{{true}}" bg='bg-blur' isCenter="{{true}}">
+    <view slot="center">
+      商品名称
+    </view>
+  </ui-navbar>
+  <!-- 顶部导航栏 end -->
+
+  <view class="swiper-wrapper">
+    <ui-swiper info="{{swiperList}}" dotStyle="long" dotCur="bg-white" height="400rpx" imgHeight="400rpx" autoplay="{{false}}" />
+  </view>
+
+  <!-- 商品信息 start -->
+  <view class="detail-info bg-white px-4 py-4">
+    <view class="info-wrapper">
+      <view class="info">
+        <view class="text-18 text-bold my-2">爱马仕唇妆系列哑光唇膏（33号）</view>
+        <view class="desc text-grey text-cut">Orange Boîte，是诞生于1942年爱马仕经典礼盒的标志性色彩。</view>
+      </view>
+      <view class="share flex">
+        <text class="cicon-share-line-o text-blue text-16"></text>
+        <text class="ml-2" style="line-height: 1;">分享</text>
+      </view>
+    </view>
+    <view class="price-action mt-4 flex">
+      <view class="price flex">
+        <view class="text-orange">
+          <text class="text-16 mr-1">¥</text>
+          <text class="text-18">320</text>
+        </view>
+        <view class="text-del text-grey ml-2">
+          <text class="text-12 mr-1">¥</text>
+          <text class="text-14">320</text>
+        </view>
+      </view>
+      <view class="tips text-right text-sm text-dark-9">2人已购买</view>
+    </view>
+  </view>
+  <!-- 商品信息 end -->
+
+  <!-- 商品规格 start -->
+  <view class="my-3 bg-white">
+    <view class="cell-item" bindtap="togglePopup" data-visible="{{true}}">
+      <text class="title">选择</text>
+      <text class="content">规格：100ml</text>
+      <text class="arrow"></text>
+    </view>
+  </view>
+  <!-- 商品规格 end -->
+
+  <!-- 商品详情 start -->
+  <view class="my-3 bg-white goods-detail">
+    <view class="cell-item">
+      <text class="content">商品详情</text>
+    </view>
+    <image src="https://assets.hermes.cn/is/image/hermesproduct/%E7%88%B1%E9%A9%AC%E4%BB%95%E5%94%87%E5%A6%86%E7%B3%BB%E5%88%97%E5%93%91%E5%85%89%E5%94%87%E8%86%8F%EF%BC%8811%E5%8F%B7%EF%BC%89--60001MV011-worn-1-0-0-800-800_g.jpg" mode="widthFix" />
+    <image src="https://assets.hermes.cn/is/image/hermesproduct/%E7%88%B1%E9%A9%AC%E4%BB%95%E5%94%87%E5%A6%86%E7%B3%BB%E5%88%97%E5%93%91%E5%85%89%E5%94%87%E8%86%8F%EF%BC%8811%E5%8F%B7%EF%BC%89--60001MV011-worn-2-0-0-800-800_g.jpg" mode="widthFix" />
+  </view>
+  <!-- 商品详情 end -->
+
+  <!-- 商品操作栏 start -->
+  <view class="bg-white car-action">
+    <view class="action-item">
+      <image src="/assets/imgs/home.png" mode="" />
+      <text>主页</text>
+    </view>
+    <view class="action-item">
+      <image src="/assets/imgs/service.png" mode="" />
+      <text>客服</text>
+    </view>
+    <view class="action-item">
+      <image src="/assets/imgs/cart.png" mode="" />
+      <text>购物车</text>
+      <view class="badge bg-red text-white round">12</view>
+    </view>
+    <view class="submit bg-orange fr flex text-14">加入购物车</view>
+    <view class="submit bg-red fr flex text-14">立即购买</view>
+  </view>
+  <!-- 商品操作栏 end -->
+</ui-sys>
+
+<view class="backdrop {{showPopup?'show':''}}" bindtap="togglePopup" data-visible="{{false}}"></view>
+<view class="popup {{showPopup?'show':''}}">
+  <view class="close" bindtap="togglePopup" data-visible="{{false}}">
+    <text class="_icon-close"></text>
+  </view>
+  <view class="popup-goods">
+    <image src="https://assets.hermes.cn/is/image/hermesproduct/60001MV033_worn_1?a=a&size=3000%2C3000&extend=0%2C0%2C0%2C0&align=0%2C0&$product_item_grid_g$&wid=400&hei=400"></image>
+    <view class="info">
+      <view>
+        <text style="font-size: 12px;" class="mr-1">￥</text>
+        <text class="text-orange text-bold" style="font-size: 18px;">9.9元</text>
+      </view>
+      <view class="my-1">
+        库存 198 件
+      </view>
+      <view>
+        已选择：精美礼盒
+      </view>
+    </view>
+  </view>
+  <view class="my-4">
+    规格
+  </view>
+  <view class="specifications flex">
+    <view class="sc-tag round">
+      <text>101</text>
+    </view>
+    <view class="sc-tag round active">
+      <text>102</text>
+    </view>
+    <view class="sc-tag round">
+      <text>103</text>
+    </view>
+  </view>
+  <view class="my-4">
+    型号
+  </view>
+  <view class="specifications flex">
+    <view class="sc-tag round">
+      <text>滋润</text>
+    </view>
+    <view class="sc-tag round active">
+      <text>补水</text>
+    </view>
+    <view class="sc-tag round">
+      <text>修复</text>
+    </view>
+  </view>
+  <view class="footer my-4" style="padding-bottom: 50rpx">
+    <text>购买数量</text>
+    <ui-stepper val="{{val}}" bind:onVal="onVal" />
+  </view>
+  <view class="action">
+    <view class="add-cart">
+      加入购物车
+    </view>
+    <view class="buy">
+      立即购买
+    </view>
+  </view>
+</view>

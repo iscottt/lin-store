@@ -1,0 +1,46 @@
+<ui-sys bg="" ui="bg-gray-thin" footer="{{false}}">
+  <!-- 顶部导航栏 start -->
+  <ui-navbar back="{{false}}" bg='bg-blur' isCenter="{{true}}">
+    <view slot="left">
+      <view class="nav-info">
+        <view class="login-user">小丸子</view>
+      </view>
+    </view>
+    <view slot="center" class="car-shop">
+      <text class="cicon-cart-o text-18 mr-10"></text>
+    </view>
+  </ui-navbar>
+
+<view class="cate-wrapper flex">
+  <view class="cate-item-wrapper">
+  <block wx:for="{{cateList}}" wx:key="index">
+    <view class="cate-item {{curId === item.id && 'active'}}" bindtap="chooseTab" data-item="{{item}}">
+      {{item.name}}
+    </view>
+  </block>
+  </view>
+  <view class="cate-content">
+    <view class="content-item">
+      <image src="https://dsm.panda-studio.cn:6089/uploads/2022/07/deep_love_category.jpg" mode="widthFix"/>
+      <text>Celine</text>
+    </view>
+    <view class="content-item">
+      <image src="https://dsm.panda-studio.cn:6089/uploads/2022/07/deep_love_category.jpg" mode="widthFix"/>
+      <text>Celine</text>
+    </view>
+    <view class="content-item">
+      <image src="https://dsm.panda-studio.cn:6089/uploads/2022/07/deep_love_category.jpg" mode="widthFix"/>
+      <text>Celine</text>
+    </view>
+    <view class="content-item">
+      <image src="https://dsm.panda-studio.cn:6089/uploads/2022/07/deep_love_category.jpg" mode="widthFix"/>
+      <text>Celine</text>
+    </view>
+    <view class="content-item">
+      <image src="https://dsm.panda-studio.cn:6089/uploads/2022/07/deep_love_category.jpg" mode="widthFix"/>
+      <text>Celine</text>
+    </view>
+  </view>
+</view>
+
+</ui-sys>

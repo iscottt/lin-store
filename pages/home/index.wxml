@@ -1,0 +1,139 @@
+<ui-sys bg="" ui="bg-gray-thin">
+  <!-- 顶部导航栏 start -->
+  <ui-navbar back="{{false}}" bg='bg-blur' isCenter="{{true}}">
+    <view slot="left">
+      <view class="nav-info">
+        <view class="login-user">小丸子</view>
+      </view>
+    </view>
+    <view slot="center" class="car-shop">
+      <text class="cicon-cart-o text-18 mr-10"></text>
+    </view>
+  </ui-navbar>
+  <!-- 搜索区域 start -->
+  <view class="home-search mx-4 my-4 flex round bg-grey-thin">
+    <text class="cicon-search text-16 ml-4"></text>
+    <text class="ml-2">搜索商品...</text>
+  </view>
+  <!-- 搜索区域 end -->
+  <!-- 顶部导航栏 end -->
+  <!-- 轮播图 start -->
+  <view class="m-4 radius mb-4" style="overflow: hidden;">
+    <ui-swiper info="{{swiperList}}" dotStyle="long" dotCur="bg-white" height="320rpx" imgHeight="320rpx" autoplay="{{false}}" />
+  </view>
+  <!-- 轮播图 end -->
+
+  <view class="tips flex px-5 mb-4">
+    <view class="tips-item">
+      <text class="cicon-safe-check-o"></text>
+      <text class="text-sm">品质保障</text>
+    </view>
+    <view class="tips-item">
+      <text class="cicon-sponsor-o"></text>
+      <text class="text-sm">价格透明</text>
+    </view>
+    <view class="tips-item">
+      <text class="cicon-deliver-o"></text>
+      <text class="text-sm">极速发货</text>
+    </view>
+    <view class="tips-item">
+      <text class="cicon-upstage-o"></text>
+      <text class="text-sm">售后无忧</text>
+    </view>
+  </view>
+
+
+  <!-- 分类列表 start-->
+  <view class="category bg-white mx-4">
+    <swiper>
+      <swiper-item>
+        <view class="cate-container">
+          <view class="cate-item" wx:for="{{popularList}}" wx:key="index">
+            <view class="img-wrapper round {{item.bg}}">
+              <image src="{{item.img}}" class="round" />
+            </view>
+            <view class="flex-center mt-2 text-sm">{{item.title}}</view>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="ui-grid grid-square ui-cols-5 p-3">
+          <view class="ui-item" wx:for="{{5}}" wx:key="index">
+            <view class="rounded">
+
+            </view>
+            <view class="flex-center position-center">{{index+6}}</view>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+    <view class="indicator">
+      <view class="indi-container">
+        <view class="anchor"></view>
+      </view>
+    </view>
+  </view>
+  <!-- 分类列表 end -->
+
+  <!-- 热门好物 start -->
+  <view class="mx-3 px-3 raduis">
+    <ui-title title="热门好物" desc="hot" hasLine />
+  </view>
+  <!-- 热门好物 end -->
+
+  <!-- 推荐商品 start -->
+  <view class="best-goods py-4 px-4">
+    <block wx:for="{{5}}" wx:key="{{index}}">
+      <!-- 商品卡片 start -->
+      <view class="goods-card" bindtap="goDetail">
+        <image src="https://assets.hermes.cn/is/image/hermesproduct/60001MV033_worn_1?a=a&size=3000%2C3000&extend=0%2C0%2C0%2C0&align=0%2C0&$product_item_grid_g$&wid=400&hei=400"></image>
+        <view class="goods-info px-3 py-3">
+          <view class="goods-name text-normal text-14 text-linecut-2">爱马仕唇妆系列哑光唇膏（33号）</view>
+          <view class="price">
+            <text class="text-10">¥</text>
+            <text class="ml-1">590</text>
+
+            <text class="through ml-2">¥</text>
+            <text class="ml-1 through">590</text>
+          </view>
+          <view class="action">
+            <text class="cicon-cart-o text-18"></text>
+          </view>
+        </view>
+      </view>
+      <!-- 商品卡片 end -->
+    </block>
+  </view>
+  <!-- 推荐商品 end -->
+
+  <!-- 新品推荐 start -->
+  <view class="mx-3 px-3 raduis">
+    <ui-title title="新品推荐" desc="new" hasLine />
+  </view>
+  <!-- 新品推荐 end -->
+
+  <!-- 推荐商品 start -->
+  <view class="best-goods py-4 px-4">
+    <block wx:for="{{5}}" wx:key="{{index}}">
+      <!-- 商品卡片 start -->
+      <view class="goods-card" bindtap="goDetail">
+        <image src="https://assets.hermes.cn/is/image/hermesproduct/60001MV033_worn_1?a=a&size=3000%2C3000&extend=0%2C0%2C0%2C0&align=0%2C0&$product_item_grid_g$&wid=400&hei=400"></image>
+        <view class="goods-info px-3 py-3">
+          <view class="goods-name text-normal text-14 text-linecut-2">爱马仕唇妆系列哑光唇膏（33号）</view>
+          <view class="price">
+            <text class="text-10">¥</text>
+            <text class="ml-1">590</text>
+
+            <text class="through ml-2">¥</text>
+            <text class="ml-1 through">590</text>
+          </view>
+          <view class="action">
+            <text class="cicon-cart-o text-18"></text>
+          </view>
+        </view>
+      </view>
+      <!-- 商品卡片 end -->
+    </block>
+  </view>
+  <!-- 推荐商品 end -->
+</ui-sys>

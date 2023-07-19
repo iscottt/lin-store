@@ -1,0 +1,8 @@
+<ui-sys bg="" ui="bg-gray-thin" footer="{{false}}">
+  <!-- 顶部导航栏 start -->
+  <ui-navbar back="{{false}}" bg='bg-blur' isCenter="{{true}}">
+    <view slot="center">
+        <view class="login-user">个人中心</view>
+    </view>
+  </ui-navbar>
+  </ui-sys>

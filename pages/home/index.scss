@@ -1,0 +1,223 @@
+/* navbar start */
+
+.nav-info {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  .login-user {
+    font-family: system-ui;
+    height: 60rpx;
+    display: flex;
+    align-items: center;
+    padding: 0 30rpx;
+    z-index: 1;
+    font-family: TITLE;
+  }
+}
+
+.car-shop {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  padding-right: 40rpx;
+}
+
+.tips {
+  align-items: center;
+  justify-content: space-between;
+  gap: 20rpx;
+  color: #999;
+
+  .tips-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  text:nth-of-type(1) {
+    color: #0081ff;
+    margin-right: 10rpx;
+  }
+}
+
+.ui-navbar-box::after {
+  border: none !important;
+}
+
+/* navbar end */
+
+/* search start */
+
+.home-search {
+  align-items: center;
+  height: 60rpx;
+}
+
+/* search end */
+
+/* popular start */
+
+.popular-list {
+  width: 100%;
+  height: 400rpx;
+  white-space: nowrap;
+
+  .popular-card {
+    width: 250rpx;
+    height: 375rpx;
+    overflow: hidden;
+    display: inline-block;
+
+    .img-main {
+      width: 250rpx;
+      height: 282rpx;
+      border-radius: 30rpx;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      image {
+        width: 160rpx;
+      }
+    }
+
+    .card-title {
+      height: 93rpx;
+      line-height: 93rpx;
+      font-family: system-ui;
+      white-space: normal;
+    }
+  }
+}
+
+.category {
+  border-radius: 20rpx;
+  padding: 0 20rpx 20rpx 20rpx;
+  position: relative;
+
+  swiper {
+    height: 190rpx;
+
+    .cate-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20rpx;
+      padding: 20rpx 0;
+
+      .cate-item {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .img-wrapper {
+          width: 100rpx;
+          height: 100rpx;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        image{
+          width: 80rpx;
+          height: 80rpx;
+        }
+      }
+    }
+
+  }
+
+  .indicator {
+    width: 100%;
+    height: 10rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .indi-container {
+      width: 60rpx;
+      height: 5rpx;
+      background: rgba(0, 0, 0, .2);
+      border-radius: 10rpx;
+
+      .anchor {
+        width: 60%;
+        height: 100%;
+        background: #0081ff;
+        border-radius: 10rpx;
+        transition: .35s;
+      }
+    }
+  }
+}
+
+/* popular end */
+
+/* best-goods start */
+.best-goods {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20rpx;
+
+  .goods-card {
+    width: calc(50% - 20rpx);
+    background: #fff;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10rpx;
+    overflow: hidden;
+    position: relative;
+    .action{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      padding: 20rpx;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text{
+        color: red;
+      }
+    }
+
+    image {
+      width: 100%;
+      height: 265rpx;
+    }
+
+    .goods-info {
+      flex: 1;
+      box-sizing: border-box;
+      height: 135rpx;
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: space-evenly;
+
+      .price {
+        width: 75rpx;
+        height: 45rpx;
+        color: #ff779c;
+        padding-top: 8rpx;
+        box-sizing: border-box;
+        text.through{
+          text-decoration: line-through;
+          color: rgba(0, 0, 0, .2);
+          font-size: 24rpx;
+        }
+      }
+    }
+  }
+}

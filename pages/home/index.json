@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "ui-title": "/mp-cu/colorUI/components/ui-title/ui-title",
+    "ui-avatar": "/mp-cu/colorUI/components/ui-avatar/ui-avatar",
+    "ui-swiper": "/mp-cu/colorUI/components/ui-swiper/ui-swiper"
+  },
+  "navigationStyle": "custom"
+}

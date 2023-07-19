@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "ui-swiper": "/mp-cu/colorUI/components/ui-swiper/ui-swiper",
+    "ui-form": "/mp-cu/colorUI/components/ui-form/ui-form",
+    "ui-stepper": "/mp-cu/colorUI/components/ui-stepper/ui-stepper",
+    "ui-radio-group": "/mp-cu/colorUI/components/ui-radio-group/ui-radio-group",
+    "ui-radio": "/mp-cu/colorUI/components/ui-radio/ui-radio"
+  },
+  "navigationStyle": "custom"
+}
